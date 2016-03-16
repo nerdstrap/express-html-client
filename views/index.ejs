@@ -1,0 +1,40 @@
+<%- layout('layouts/default') %>
+
+<div class="row">
+	<div class="col-md-3">
+
+		<!-- card -->
+		<div class="card card-primary">
+
+			<!-- heading -->
+			<div class="card-heading">
+				<div class="pull-right text-right"><a role="button" data-toggle="collapse" href="#collapse"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a></div>
+				<h4 class="card-title">title</h4>
+			</div>
+			<!-- heading -->
+
+			<!-- collapse -->
+			<div id="collapse" class="card-collapse collapse in">
+
+				<!-- body -->
+				<div class="card-body">
+					body
+				</div>
+				<!-- body -->
+
+				<!-- footer -->
+				<div class="card-footer">
+					footer
+				</div>
+				<!-- footer -->
+
+			</div>
+			<!-- collapse -->
+
+		</div>
+		<!-- card -->
+
+	</div>
+</div>
+
+<% block('customScript').append('<script src="/libs/indexView.js"></script><script>indexView.init();</script>') %>

@@ -1,0 +1,7 @@
+<script src="/libs/bower_components/jquery/jquery.js"></script>
+<script src="/libs/bower_components/bootstrap-sass/bootstrap.js"></script>
+<script src="/libs/bower_components/peity/jquery.peity.js"></script>
+<%- block("customScript").toString() %>
+<% if (process.env.NODE_ENV == 'development') { %>
+<script type="text/javascript" src="<%= livereloadSrc %>"></script>
+<% } %>

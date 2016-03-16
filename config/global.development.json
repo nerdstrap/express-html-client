@@ -1,0 +1,62 @@
+{
+	"client": {
+		"name": "express-html-client"
+	},
+	"server": {
+		"port": 3000,
+		"name": "express-html-client",
+		"defaultVersion": "1.0.0",
+		"acceptable": [
+			"application/json"
+		],
+		"security": {
+			"secret": "ruffruffmoo"
+		},
+		"viewEngine": "ejs"
+	},
+	"session": {
+		"name": "connect.sid"
+	},
+	"logging": {
+		"format": "combined"
+	},
+	"gulp": {
+		"paths": {
+			"env": "./gulp/",
+			"tasks": "./tasks/",
+			"node": {
+				"install": "./node_modules"
+			},
+			"bower": {
+				"cache": "./.bower-cache",
+				"install": "./bower_components"
+			},
+			"sass": {
+				"cache": "./.sass-cache",
+				"loadPath": [
+					"./bower_components/font-awesome-sass/assets/stylesheets",
+					"./bower_components/bootstrap-sass/assets/stylesheets"
+				]
+			},
+			"fonts": {
+				"font_awesome": "./bower_components/font-awesome-sass/assets",
+				"bootstrap": "./bower_components/font-awesome-sass/assets",
+				"install": "./fonts",
+				"build": "./fonts"
+			},
+			"css": {
+				"install": "./css/bower_components",
+				"build": "./css",
+				"maps": "./css/maps"
+			},
+			"img": {
+				"install": "./img/bower_components",
+				"build": "./img"
+			},
+			"libs": {
+				"install": "./css/bower_components",
+				"build": "./libs"
+			}
+		}
+	}
+}

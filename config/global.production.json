@@ -1,0 +1,23 @@
+{
+	"client": {
+		"name": "express-html-client"
+	},
+	"server": {
+		"port": 3000,
+		"name": "express-html-client",
+		"defaultVersion": "1.0.0",
+		"acceptable": [
+			"application/json"
+		],
+		"security": {
+			"secret": "ruffruffmoo"
+		},
+		"viewEngine": "ejs"
+	},
+	"session": {
+		"name": "connect.sid"
+	},
+	"logging": {
+		"format": "combined"
+	}
+}

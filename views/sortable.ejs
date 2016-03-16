@@ -1,0 +1,100 @@
+<%- layout('layouts/default') %>
+<div class="page-header">
+	<h2>Production Management</h2>
+</div>
+<div class="product-selector">
+	<div class="btn-group">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Regions
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			<li><a href="#">Region 1</a></li>
+			<li><a href="#">Region 2</a></li>
+			<li><a href="#">Region 3</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="#">Region 4</a></li>
+		</ul>
+	</div>
+	<div class="btn-group">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Plants
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+			<li><a href="#">Plant 1</a></li>
+			<li><a href="#">Plant 2</a></li>
+			<li><a href="#">Plant 3</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="#">Plant 4</a></li>
+		</ul>
+	</div>
+	<div class="btn-group">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Lines
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+			<li><a href="#">Line 1</a></li>
+			<li><a href="#">Line 2</a></li>
+			<li><a href="#">Line 3</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="#">Line 4</a></li>
+		</ul>
+	</div>
+	<div class="btn-group">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Products
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			<li><a href="#">Product 1</a></li>
+			<li><a href="#">Product 2</a></li>
+			<li><a href="#">Product 3</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="#">Product 4</a></li>
+		</ul>
+	</div>
+</div>
+<div class="product-mixes">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Available SKUs</div>
+		<div class="panel-body">
+			choose the appropriate mix based on the inventory available and sales forcasting
+		</div>
+		<ul class="list-group">
+			<% for(var i = 0; i < mixes.length; i++) { %>
+			<% var mix = mixes[i]; %>
+			<li class="list-group-item"><span class="badge">5</span><%= mix.title %></li>
+			<% } %>
+		</ul>
+	</div>
+</div>
+<div class="production-schedule">
+	<h2>Production Schedule</h2>
+	<div class="schedule">
+		<% for(var j = 0; j < productionEntries.length; j++) { %>
+		<% var entry = productionEntries[j]; %>
+		<div class="item production-entry-card">
+			<div class="panel panel-<%= entry.status %>">
+				<div class="panel-heading">
+					<%= entry.date + ': shift ' + entry.shift %>
+				</div>
+				<div class="panel-body">
+					<%= entry.sku %>
+				</div>
+			</div>
+		</div>
+		<% } %>
+	</div>
+</div>
+<div class="lot-inventory">
+	<div class="panel panel-default">
+		<div class="panel-heading">Lot Inventory</div>
+		<div class="panel-body">
+			&nbsp;
+		</div>
+	</div>
+</div>
+
+<% block('customScript').append('<script src="/libs/indexView.js"></script><script>indexView.init();</script>') %>

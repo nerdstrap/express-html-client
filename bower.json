@@ -1,0 +1,12 @@
+{
+	"name": "express-html-client",
+	"dependencies": {
+		"jquery": "latest",
+		"font-awesome-sass": "latest",
+		"bootstrap-sass": "latest",
+		"sortable": "latest",
+		"peity": "latest"
+	},
+	"overrides": {
+	}
+}

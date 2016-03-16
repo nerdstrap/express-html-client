@@ -1,0 +1,52 @@
+{
+	"name": "express-html-client",
+	"description": "express-html-client",
+	"version": "1.0.0",
+	"author": "Michael Baltic <geekstrap@live.com>",
+	"contributors": [],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/nerdstrap/express-html-client.git"
+	},
+	"bugs": "http://github.com/nerdstrap/express-html-client/issues",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org"
+	},
+	"engines": {
+		"node": "5.6.0",
+		"npm": "3.7.2"
+	},
+	"dependencies": {
+		"body-parser": "latest",
+		"express": "latest",
+		"ejs": "latest",
+		"ejs-mate": "latest",
+		"forever": "latest",
+		"lodash": "latest",
+		"morgan": "latest",
+		"nconf": "latest",
+		"serve-favicon": "latest"
+	},
+	"devDependencies": {
+		"csslint": "latest",
+		"gulp": "latest",
+		"gulp-bower": "latest",
+		"gulp-csslint": "latest",
+		"gulp-flatten": "latest",
+		"gulp-jshint": "latest",
+		"gulp-livereload": "latest",
+		"gulp-load-plugins": "latest",
+		"gulp-notify": "latest",
+		"gulp-nodemon": "latest",
+		"gulp-rimraf": "latest",
+		"gulp-ruby-sass": "latest",
+		"gulp-sourcemaps": "latest",
+		"jshint": "latest",
+		"jshint-stylish": "latest",
+		"main-bower-files": "latest",
+		"require-dir": "latest"
+	},
+	"scripts": {},
+	"main": "./server"
+}

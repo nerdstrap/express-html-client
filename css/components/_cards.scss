@@ -1,0 +1,81 @@
+//
+// Cards
+// --------------------------------------------------
+
+// Base class
+.card {
+	margin-bottom: $line-height-computed;
+	background-color: $card-bg;
+	border: solid 1px $card-border;
+	border-radius: $card-border-radius;
+	@include box-shadow(0 1px 1px rgba(0, 0, 0, .05));
+}
+
+// Card contents
+.card-body {
+	padding: $card-body-padding;
+	@include clearfix;
+}
+
+// Optional heading
+.card-heading {
+	padding: $card-heading-padding;
+	border-bottom: 1px solid transparent;
+	@include border-top-radius(($card-border-radius - 1));
+
+	> .dropdown .dropdown-toggle {
+		color: inherit;
+	}
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.card-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: ceil(($font-size-base * 1.125));
+	color: inherit;
+
+	> a,
+	> small,
+	> .small,
+	> small > a,
+	> .small > a {
+		color: inherit;
+	}
+}
+
+// Optional footer
+.card-footer {
+	padding: $card-footer-padding;
+	@include border-bottom-radius(($card-border-radius - 1));
+	border-top: 1px solid transparent;
+
+	> .dropdown .dropdown-toggle {
+		color: inherit;
+	}
+}
+
+// Contextual variations
+.card-default {
+	@include card-variant($card-default-border, $card-default-text, $card-default-heading-bg, $card-default-border, $card-default-text, $card-default-footer-bg, $card-default-border);
+}
+
+.card-primary {
+	@include card-variant($card-primary-border, $card-primary-text, $card-primary-heading-bg, $card-primary-border, $card-primary-text, $card-primary-footer-bg, $card-primary-border);
+}
+
+.card-success {
+	@include card-variant($card-success-border, $card-success-text, $card-success-heading-bg, $card-success-border, $card-success-text, $card-success-footer-bg, $card-success-border);
+}
+
+.card-info {
+	@include card-variant($card-info-border, $card-info-text, $card-info-heading-bg, $card-info-border, $card-info-text, $card-info-footer-bg, $card-info-border);
+}
+
+.card-warning {
+	@include card-variant($card-warning-border, $card-warning-text, $card-warning-heading-bg, $card-warning-border, $card-warning-text, $card-warning-footer-bg, $card-warning-border);
+}
+
+.card-danger {
+	@include card-variant($card-danger-border, $card-danger-text, $card-danger-heading-bg, $card-danger-border, $card-danger-text, $card-danger-footer-bg, $card-danger-border);
+}
