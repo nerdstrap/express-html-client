@@ -14,10 +14,11 @@
 		"registry": "https://registry.npmjs.org"
 	},
 	"engines": {
-		"node": "5.6.0",
-		"npm": "3.7.2"
+		"node": "5.8.0",
+		"npm": "3.8.0"
 	},
 	"dependencies": {
+		"bower": "latest",
 		"body-parser": "latest",
 		"express": "latest",
 		"ejs": "latest",
@@ -47,6 +48,8 @@
 		"main-bower-files": "latest",
 		"require-dir": "latest"
 	},
-	"scripts": {},
+	"scripts": {
+		"postinstall": "./node_modules/bower/bin/bower install"
+	},
 	"main": "./server"
 }
